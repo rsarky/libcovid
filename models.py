@@ -6,6 +6,7 @@ def SIR(N=10000, i0=1, e=4, t=0.35, gamma=0.8, days=100):
     e     avg no. of contacts per person per unit time (1 day)
     t     probability of transmission in a contact with an infected item
     gamma rate of recovery and death per person per unit time
+    days  Number of days (time steps) to run the simulation for
     returns tuple: (S, I, R)
     S,I,R are lists of length 'days'. Each element of the list contains the
     number of people in the compartment on that day.
@@ -34,6 +35,7 @@ def SEIR(N=10000, i0=1, a=4, e=4, t=0.35, gamma=0.8, days=100):
     a     incubation period
     e     avg no. of contacts per person per unit time (1 day)
     t     probability of transmission in a contact with an infected item
+    days  Number of days (time steps) to run the simulation for
     gamma rate of recovery and death per person per unit time
     returns tuple: (S, E, I, R)
     S,E,I,R are lists of length 'days'. Each element of the list contains the

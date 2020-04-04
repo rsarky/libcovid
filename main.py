@@ -3,11 +3,12 @@ import models
 
 
 def main(args):
-    S, I, R = models.SIR(t=0.9)
+    S, E, I, R = models.SEIR(t=0.9)
     s_line, = plt.plot(S)
+    e_line, = plt.plot(E)
     i_line, = plt.plot(I)
     r_line, = plt.plot(R)
-    plt.legend([s_line, i_line, r_line],['Susceptible',  'Infectious', 'Removed'])
+    plt.legend([s_line, e_line, i_line, r_line],['Susceptible',  'Exposed', 'Infectious', 'Removed'])
     plt.show()
 
 
